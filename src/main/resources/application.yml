@@ -1,0 +1,45 @@
+#必须是application命名的文件，因为springboot 的pom文件可以看到自动读取的几种文件如下。
+#<include>**/application*.yml</include>
+#<include>**/application*.yaml</include>
+#<include>**/application*.properties</include>
+
+#----------------------------yml语法-------------------
+#空格敏感
+# 1.普通key-value
+name: hanchen
+
+# 2.1 对象
+student:
+  name: hanchen
+  age: 22
+
+# 2.2可以行内写
+teacher: {name: laoshi,age: 22}
+
+# 3.1数组写法
+pets:
+  -dog
+  -cat
+  -pig
+
+#  3.2可以行内写
+animal: [dog,cat,pig]
+
+#****************************************实例*************
+person:
+  name: han
+  age: ${random.int}
+  ishappy: true
+  birth: 2021/02/02
+  maps: {k1: v1,k2: v2}
+  list:
+    -code
+    -girl
+    -music
+  dog:
+    name: ${person.hello:haha}_旺财
+#    person.hello没有值取haha
+    age: ${random.uuid}
+
+#************yml配置可以自生成一些参数*****************************************
+#age: ${random.int}
