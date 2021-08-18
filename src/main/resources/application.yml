@@ -39,7 +39,7 @@ person:
   dog:
     name: ${person.hello:haha}_旺财
 #    person.hello没有值取haha
-    age: ${random.uuid}
-
+#    age: ${random.uuid}
+    age: 10
 #************yml配置可以自生成一些参数*****************************************
 #age: ${random.int}

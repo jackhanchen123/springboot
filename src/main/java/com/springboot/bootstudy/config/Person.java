@@ -2,7 +2,9 @@ package com.springboot.bootstudy.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
+import javax.validation.constraints.Email;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -10,9 +12,10 @@ import java.util.Map;
 
 @ConfigurationProperties(prefix = "person")
 //指定到yml中的person配置
+@Validated // 数据校验
 public class Person {
 
-
+    @Email(message = "邮箱格式错误")
     private  String name;
     private Integer age;
 
