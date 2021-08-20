@@ -95,3 +95,13 @@ Booelan检查
 @Email 验证是否是邮件地址，如果为null,不进行验证，算通过验证。 
 @ScriptAssert(lang= ,script=, alias=) 
 @URL(protocol=,host=, port=,regexp=, flags=)
+
+## 配置文件优先级
+
+![image-20210821020703333](C:\Users\84606\AppData\Roaming\Typora\typora-user-images\image-20210821020703333.png)
+
+```properties
+spring.profiles.active=dev
+#多环境指定配置文件
+```
+
