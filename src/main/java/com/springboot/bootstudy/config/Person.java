@@ -15,7 +15,7 @@ import java.util.Map;
 @Validated // 数据校验
 public class Person {
 
-    @Email(message = "邮箱格式错误")
+//    @Email(message = "邮箱格式错误")
     private  String name;
     private Integer age;
 
