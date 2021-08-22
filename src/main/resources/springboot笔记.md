@@ -105,3 +105,26 @@ spring.profiles.active=dev
 #多环境指定配置文件
 ```
 
+## spring自动配置原理
+
+1. Springboot启动会加载大量的自动配置类
+2. 看我们需要的功能有没有在Springboot中默认自动配置类中
+3. 如果存在，我们就不需要手动配置了
+4. 给容器中自动配置类添加组件的时候，会从properties类中获取某些属性，便可以在配置文件中指定自定义值。
+
+![image-20210823010924988](C:\Users\84606\AppData\Roaming\Typora\typora-user-images\image-20210823010924988.png)
+
+xxxAutoConfiguration:默认值  ====》  绑定配置文件xxxProperties====》    和配置文件yml中的配置项绑定（自定义配置）
+
+xxxAutoConfiguration：自动配置类：给容器中添加组件
+
+xxxProperties：封装配置文件中相关属性
+
+![img](https://pic3.zhimg.com/80/v2-f8bedc8a5eb6ff8b39aeddcf640f9fc6_720w.jpg)
+
+#### yml
+
+  debug=true
+
+查看自动配置类的生效情况
+
